@@ -1,11 +1,7 @@
 basic.forever(function () {
-    for (let Z = 0; Z <= 8; Z++) {
+    for (let X = 0; X <= 8; X++) {
         for (let Y = 0; Y <= 4; Y++) {
-            for (let X = 0; X <= 4; X++) {
-                if (X + Y == Z) {
-                    led.plot(4 - Y, 4 - X)
-                }
-            }
+            led.plot(4 - Y, 4 - (X - Y))
             basic.pause(100)
         }
     }
